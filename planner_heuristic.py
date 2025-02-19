@@ -319,6 +319,8 @@ def main():
 
     compressed_path = cleanup_path(path)
     compressed_path = [(x / 4 - 12, y / 4 - 12) for y, x in compressed_path]
+
+    np.savetxt('path.csv', compressed_path, delimiter=',', fmt='%s')
     print(compressed_path)
 
 if __name__ == '__main__':
